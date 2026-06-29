@@ -1,0 +1,45 @@
+@media (prefers-reduced-motion: no-preference) {
+  .tk-reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 620ms ease, transform 620ms ease;
+    transition-delay: var(--tk-delay, 0ms);
+    will-change: opacity, transform;
+  }
+
+  .tk-reveal.tk-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .tk-page-curtain {
+    position: fixed;
+    inset: 0;
+    z-index: 2147483000;
+    background: #fff;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity 320ms ease;
+  }
+
+  html.tk-page-loaded .tk-page-curtain {
+    opacity: 0;
+  }
+
+  html.tk-page-leaving .tk-page-curtain {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tk-reveal,
+  .tk-reveal.tk-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .tk-page-curtain {
+    display: none;
+  }
+}
