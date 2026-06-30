@@ -1162,6 +1162,10 @@ iframe {
     grid-template-columns: 1fr !important;
   }
 
+  .home-about-grid {
+    grid-template-columns: 1fr !important;
+  }
+
   .home-about-media {
     order: 1;
   }
