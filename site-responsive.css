@@ -1131,8 +1131,14 @@ iframe {
     min-height: 68px !important;
     flex-wrap: wrap !important;
     gap: 12px !important;
+    align-items: center !important;
+    justify-content: space-between !important;
     padding-top: 12px !important;
     padding-bottom: 12px !important;
+  }
+
+  body > div > nav[style] > a:first-child {
+    order: 1 !important;
   }
 
   body > div > nav[style] > div {
@@ -1145,7 +1151,11 @@ iframe {
   }
 
   body > div > nav[style] > a:last-child {
-    display: none !important;
+    order: 2 !important;
+    display: inline-flex !important;
+    margin-left: auto !important;
+    padding: 9px 14px !important;
+    white-space: nowrap !important;
   }
 
   header > div[style],
