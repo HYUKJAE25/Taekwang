@@ -21,6 +21,34 @@ document.querySelectorAll("[data-current-year]").forEach((node) => {
   node.textContent = String(new Date().getFullYear());
 });
 
+const forcedVideos = document.querySelectorAll("video[data-force-play]");
+if (forcedVideos.length) {
+  const playVideo = (video) => {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.loop = true;
+    video.playsInline = true;
+
+    const attempt = video.play();
+    if (attempt && typeof attempt.catch === "function") attempt.catch(() => {});
+  };
+
+  forcedVideos.forEach((video) => {
+    video.preload = "auto";
+    video.addEventListener("loadeddata", () => playVideo(video), { once: true });
+    video.addEventListener("canplay", () => playVideo(video));
+    video.addEventListener("pause", () => {
+      if (!document.hidden) playVideo(video);
+    });
+    video.load();
+    playVideo(video);
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) forcedVideos.forEach(playVideo);
+  });
+}
+
 const toc = document.querySelector(".sub-toc");
 if (toc) {
   const links = Array.from(toc.querySelectorAll('a[href^="#"]'));
