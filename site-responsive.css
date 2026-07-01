@@ -421,7 +421,7 @@ iframe {
 
 .site-cards {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
 }
 
@@ -827,7 +827,7 @@ iframe {
 
 .esg-grid article,
 .ethics-grid article {
-  padding: 26px 24px;
+  padding: 22px 22px;
 }
 
 .esg-grid article {
@@ -836,27 +836,33 @@ iframe {
 
 .esg-grid strong {
   color: var(--accent);
-  font-size: 42px;
+  font-size: 34px;
   font-weight: 900;
+  line-height: 1;
 }
 
 .esg-grid h3,
 .ethics-grid h3 {
-  margin: 14px 0 10px;
+  margin: 12px 0 8px;
+  font-size: 18px;
+  line-height: 1.4;
 }
 
 .esg-grid p,
 .ethics-grid p,
 .simple-list p {
+  margin: 0;
   color: #5b6470;
+  font-size: 14px;
   line-height: 1.75;
 }
 
 .esg-grid ul {
-  margin: 18px 0 0;
+  margin: 14px 0 0;
   padding-left: 18px;
   color: #3a4250;
-  line-height: 1.8;
+  font-size: 14px;
+  line-height: 1.75;
 }
 
 .simple-list {
@@ -876,7 +882,7 @@ iframe {
 }
 
 .simple-list strong {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .qr-panel {
@@ -893,11 +899,14 @@ iframe {
 
 .qr-panel h3 {
   margin: 0 0 8px;
+  font-size: 18px;
+  line-height: 1.4;
 }
 
 .qr-panel p {
   margin: 0;
   color: rgba(255, 255, 255, .72);
+  font-size: 14px;
   line-height: 1.7;
 }
 
