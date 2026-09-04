@@ -347,9 +347,9 @@ iframe {
 
 .org-lines span:first-child {
   position: absolute;
-  right: calc((100% - 42px) / 8);
+  right: 10%;
   bottom: 0;
-  left: calc((100% - 42px) / 8);
+  left: 10%;
   height: 2px;
   background: #c8cdd5;
 }
